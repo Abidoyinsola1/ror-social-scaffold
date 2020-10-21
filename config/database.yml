@@ -21,7 +21,7 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres
-
+  password: konami
 development:
   <<: *default
   database: ror_social_scaffold_development
@@ -82,3 +82,4 @@ test:
 production:
   <<: *default
   database: ror_social_scaffold_production
+  
