@@ -2,5 +2,11 @@
   Name: <%= user.name %>
   <span class="profile-link">
     <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+    <%
+=begin%>
+ <%= link_to 'Add Friend',  user_path(user), class: 'profile-link' %> 
+<%
+=end%>
+
   </span>
 </li>
