@@ -25,6 +25,18 @@ class User < ApplicationRecord
     User.where(id: ids)
   end
 
+  def confirm_friend(user)
+    friend = Friendship.find_by(user_id: user.id, friend_id: id)
+    friend.confirmed = true
+    friend.save
+    Friendship.create!(friend_id: user.id, user_id: id, confirmed: true)
+  end
+
+  def reject_request(user)
+    friendship = inverse_friendships.find { |f| f.user == user }
+    friendship.destroy
+  end
+
   def friend_with?(user)
     Friendship.confirmed_record?(id, user.id)
   end
