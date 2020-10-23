@@ -12,7 +12,7 @@ module UsersHelper
       out << ' | '
       out << link_to('Reject', reject_path(user_id: obj.id), class: 'profile-link f-link', method: :delete)
     else
-      out << link_to('Invite to friendship', invite_path(user_id: obj.id), class: 'profile-link f-link', method: :post)
+      out << link_to('Send friend request', invite_path(user_id: obj.id), class: 'profile-link f-link', method: :post)
     end
 
     out.html_safe

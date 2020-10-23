@@ -35,12 +35,11 @@ class User < ApplicationRecord
     Friendship.confirmed_record?(id, user.id)
   end
 
-  def send_friendship(user)
-    friendships.create(friend_id :user.id)
+  def send_friendship(_user)
+    friendships.create(friend_id(:user.id))
   end
 
   def friend?(user)
     friends.include?(user)
   end
-
 end

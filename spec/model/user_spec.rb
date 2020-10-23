@@ -8,13 +8,13 @@ RSpec.describe User, type: :model do
     end
 
     it 'ensures email presence' do
-        user = User.new(name: 'Abigail', email: '', password: '12345678').save
-        expect(user).to eql(false)
+      user = User.new(name: 'Abigail', email: '', password: '12345678').save
+      expect(user).to eql(false)
     end
 
-      it 'ensures password presence' do
-        user = User.new(name: 'Abigail', email: 'abig@gmail.com', password: '').save
-        expect(user).to eql(false)
+    it 'ensures password presence' do
+      user = User.new(name: 'Abigail', email: 'abig@gmail.com', password: '').save
+      expect(user).to eql(false)
     end
 
     it 'should save successfully' do
