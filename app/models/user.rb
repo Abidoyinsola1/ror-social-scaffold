@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, length: { maximum: 20 }
+  validates :email, :password, presence: true
 
   has_many :posts
   has_many :comments, dependent: :destroy
@@ -17,13 +18,6 @@ class User < ApplicationRecord
   has_many :pending_friends, through: :pending_friendships, source: :friend
   has_many :inverted_friendships, -> { where confirmed: false }, class_name: 'Friendship', foreign_key: 'friend_id'
   has_many :friend_requests, through: :inverted_friendships, source: :user
-
-  def friends
-    friends_i_sent_friendship = Friendship.where(user_id: id, confirmed: true).pluck(:friend_id)
-    friends_i_got_friendship = Friendship.where(friend_id: id, confirmed: true).pluck(:user_id)
-    ids = friends_i_sent_friendship + friends_i_got_friendship
-    User.where(id: ids)
-  end
 
   def confirm_friend(user)
     friend = Friendship.find_by(user_id: user.id, friend_id: id)
