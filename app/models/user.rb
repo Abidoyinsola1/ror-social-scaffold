@@ -33,7 +33,7 @@ class User < ApplicationRecord
   end
 
   def reject_request(user)
-    friendship = inverse_friendships.find { |f| f.user == user }
+    friendship = inverted_friendships.find { |f| f.user == user }
     friendship.destroy
   end
 
