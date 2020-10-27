@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'should save successfully' do
-        comment = Comment.new(content: "We've got something rolling").save
+      comment = Comment.new(content: "We've got something rolling").save
       expect(comment).to eql(false)
     end
   end
