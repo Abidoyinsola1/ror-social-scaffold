@@ -6,6 +6,7 @@
 
 - Ruby
 - Ruby on Rails
+- VS Code
 
 ## Live Demo
 
