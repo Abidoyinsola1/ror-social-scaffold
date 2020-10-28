@@ -57,8 +57,7 @@ Start server with:
 
 ```
     rails server
-```
-Open `http://localhost:3000/` in your browser.
+   Open `http://localhost:3000/` in your browser.
 ```
 
 👤 **Oyeleke Ayomide**
