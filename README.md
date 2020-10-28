@@ -1,6 +1,8 @@
 # Scaffold for social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> This repo includes initial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+
+![screenshot](./app/assets/images/screenshot.png)
 
 ## Built With
 
@@ -29,19 +31,26 @@ Install gems with:
 ```
 bundle install
 ```
+Clone the Repo with:
+~~~bash
+
+$ git clone https://github.com/Abidoyinsola1/ror-social-scaffold.git
+$ cd ror-social-scaffold
+~~~
+Setup database with:
+
+> make sure you have postgress sql installed and running on your system
 
 ```
+   rails db:create
+   rails db:migrate
+```
 
-### Github Actions
+### Run tests
 
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
-
+```
+    rpsec 
+```
 ### Usage
 
 Start server with:
@@ -49,30 +58,26 @@ Start server with:
 ```
     rails server
 ```
-
 Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
-```
-    rpsec --format documentation
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+👤 **Oyeleke Ayomide**
 
-### Deployment
+- Github: [@Haywhizzz](https://github.com/Haywhizzz)
+- Twitter: [@Haywhizzz](https://twitter.com/Haywhizzz)
+- Linkedin: [Haywhizzz](https://www.linkedin.com/in/oyeleke-ayomide)
 
-TBA
 
-## Authors
+👤 **Abiola Doyinsola Adeyemi**
 
-TBA
+- Github: [@Abidoyinsola1](https://github.com/Abidoyinsola1)
+- Twitter: [@Abidoyinsola](https://twitter.com/abidoyinsola)
+- LinkedIn: [Doyinsola Abiola Adeyemi](https://www.linkedin.com/in/doyinsola-adeyemi)
+
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
 
 ## Show your support
 
@@ -80,9 +85,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
-
-## 📝 License
-
-TBA
+- Project inspired by Microverse Program and The Odin Project
 
