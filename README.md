@@ -6,6 +6,7 @@
 
 - Ruby
 - Ruby on Rails
+- VS Code
 
 ## Live Demo
 
@@ -20,7 +21,7 @@ To get a local copy up and running follow these simple example steps.
 
 Ruby
 Rails
-Postgres:
+Postgres
 
 ### Setup
 
